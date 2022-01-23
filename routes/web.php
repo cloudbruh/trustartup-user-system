@@ -23,8 +23,8 @@ $router->post('users/attempt', 'UserController@attempt');
 $router->post('users/{id}/roles', 'RoleController@add');
 $router->delete('users/{id}/roles', 'RoleController@delete');
 
-$router->get('datasets/', 'DatasetController@show');
+$router->get('datasets', 'DatasetController@show');
 $router->get('datasets/{id}', 'DatasetController@get');
-$router->put('datasets/{id}', 'DatasetController@update');
+$router->put('datasets', 'DatasetController@update');
 $router->get('users/{id}/datasets', 'DatasetController@getByUser');
 $router->post('users/{id}/datasets', 'DatasetController@create');

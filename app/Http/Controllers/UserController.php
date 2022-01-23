@@ -96,7 +96,7 @@ class UserController extends Controller
      *          response=200,
      *          description="OK",
      *          @OA\JsonContent(ref="#/components/schemas/User"),
-     *      ),
+     *               ),
      *      @OA\Response(response=404, description="Not Found")
      *  )
      */

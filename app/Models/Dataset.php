@@ -40,7 +40,7 @@ class Dataset extends Model
      * @OA\Property(
      *     title="type",
      *     description="type",
-     *     example=1
+     *     example="CREATOR"
      * )
      */
 
@@ -50,7 +50,7 @@ class Dataset extends Model
      * @OA\Property(
      *     title="content",
      *     description="content",
-     *     example=1
+     *     example="Documents 123"
      * )
      */
 
@@ -60,7 +60,7 @@ class Dataset extends Model
      * @OA\Property(
      *     title="status",
      *     description="status",
-     *     example=1
+     *     example="PENDING"
      * )
      */
 
@@ -70,11 +70,29 @@ class Dataset extends Model
      * @OA\Property(
      *     title="comment",
      *     description="comment",
-     *     example=1
+     *     example="Wrong name"
      * )
      */
 
     public $comment;
+
+    /**
+     * @OA\Property(
+     *     title="created_at",
+     *     description="created_at",
+     *     example="2022-01-22T21:34:30.000000"
+     * )
+     */
+    public $created_at;
+
+    /**
+     * @OA\Property(
+     *     title="updated_at",
+     *     description="updated_at",
+     *     example="2022-01-22T21:34:30.000000"
+     * )
+     */
+    public $updated_at;
 
     protected $fillable = [
         'user_id', 'type', 'content', 'status', 'comment'

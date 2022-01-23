@@ -60,7 +60,9 @@ $app->singleton(
 */
 
 $app->configure('app');
-$app->configure('swagger-lume');
+if (env('APP_ENV') == 'local'){
+    $app->configure('swagger-lume');
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -93,8 +95,10 @@ $app->configure('swagger-lume');
 */
 
 // $app->register(App\Providers\AppServiceProvider::class);
-$app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
-$app->register(\SwaggerLume\ServiceProvider::class);
+if (env('APP_ENV') == 'local'){
+    $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
+    $app->register(\SwaggerLume\ServiceProvider::class);
+}
 
 /*
 |--------------------------------------------------------------------------

@@ -79,6 +79,24 @@ class User extends Model
     public $media_id;
 
     /**
+     * @OA\Property(
+     *     title="created_at",
+     *     description="created_at",
+     *     example="2022-01-22T21:34:30.000000"
+     * )
+     */
+    public $created_at;
+
+    /**
+     * @OA\Property(
+     *     title="updated_at",
+     *     description="updated_at",
+     *     example="2022-01-22T21:34:30.000000"
+     * )
+     */
+    public $updated_at;
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
@@ -101,6 +119,17 @@ class User extends Model
     ];
 
     protected $with = ['roles'];
+
+    /**
+    * @OA\Property(
+     *     title="roles",
+     *     description="roles",
+     *     type="array",
+     *      @OA\Items(ref="#/components/schemas/Role"),
+    *
+    * )
+    */
+    public $roles;
 
     public function roles()
     {
