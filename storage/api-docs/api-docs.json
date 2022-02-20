@@ -296,16 +296,21 @@
                     "type": {
                         "title": "type",
                         "description": "APPLICANT or CREATOR or ADMIN or MODERATOR",
+                        "type": "string",
                         "example": "APPLICANT"
                     },
                     "created_at": {
                         "title": "created_at",
                         "description": "created_at",
+                        "type": "string",
+                        "format": "datetime",
                         "example": "2022-01-22T21:34:30.000000"
                     },
                     "updated_at": {
                         "title": "updated_at",
                         "description": "updated_at",
+                        "type": "string",
+                        "format": "datetime",
                         "example": "2022-01-22T21:34:30.000000"
                     }
                 },
@@ -321,41 +326,64 @@
                     "id": {
                         "title": "id",
                         "description": "id",
+                        "type": "integer",
                         "example": 1
                     },
                     "name": {
                         "title": "name",
                         "description": "name",
+                        "type": "string",
                         "example": "Ivan"
                     },
                     "surname": {
                         "title": "surname",
                         "description": "surname",
+                        "type": "string",
                         "example": "Hue"
                     },
                     "email": {
                         "title": "email",
                         "description": "email",
+                        "type": "string",
                         "example": "vaehu@gmail.com"
                     },
                     "description": {
                         "title": "description",
                         "description": "description",
+                        "type": "string",
                         "example": "Developer in Google working around 20 hour a week"
+                    },
+                    "password": {
+                        "title": "password",
+                        "description": "password",
+                        "type": "string",
+                        "example": "$2a$12$tYFi99IzacgMkgCZKUSkkuU7kL1PZb0MsvpvRQryLU2TJ6hW.A7HC"
                     },
                     "media_id": {
                         "title": "media_id",
                         "description": "media_id",
-                        "example": "1"
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "confirmed_at": {
+                        "title": "confirmed_at",
+                        "description": "confirmed_at",
+                        "type": "string",
+                        "format": "datetime",
+                        "example": "2022-01-22T21:34:30.000000"
                     },
                     "created_at": {
                         "title": "created_at",
                         "description": "created_at",
+                        "type": "string",
+                        "format": "datetime",
                         "example": "2022-01-22T21:34:30.000000"
                     },
                     "updated_at": {
                         "title": "updated_at",
                         "description": "updated_at",
+                        "type": "string",
+                        "format": "datetime",
                         "example": "2022-01-22T21:34:30.000000"
                     },
                     "roles": {

@@ -21,6 +21,7 @@ class Role extends Model
      *     description="APPLICANT or CREATOR or ADMIN or MODERATOR",
      *     example="APPLICANT"
      * )
+     * @var string
      */
     private $type;
 
@@ -28,7 +29,9 @@ class Role extends Model
      * @OA\Property(
      *     title="created_at",
      *     description="created_at",
-     *     example="2022-01-22T21:34:30.000000"
+     *     example="2022-01-22T21:34:30.000000",
+     *     format="datetime",
+     *     type="string"
      * )
      */
     private $created_at;
@@ -37,7 +40,9 @@ class Role extends Model
      * @OA\Property(
      *     title="updated_at",
      *     description="updated_at",
-     *     example="2022-01-22T21:34:30.000000"
+     *     example="2022-01-22T21:34:30.000000",
+     *     format="datetime",
+     *     type="string"
      * )
      */
     private $updated_at;

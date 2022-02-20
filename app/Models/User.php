@@ -24,6 +24,7 @@ class User extends Model
      *     description="id",
      *     example=1
      * )
+     * @var integer
      */
 
     private $id;
@@ -34,6 +35,7 @@ class User extends Model
      *     description="name",
      *     example="Ivan"
      * )
+     * @var string
      */
 
     private $name;
@@ -44,16 +46,18 @@ class User extends Model
      *     description="surname",
      *     example="Hue"
      * )
+     * @var string
      */
 
     private $surname;
 
-     /**
+    /**
      * @OA\Property(
      *     title="email",
      *     description="email",
      *     example="vaehu@gmail.com"
      * )
+     * @var string
      */
 
     private $email;
@@ -64,25 +68,51 @@ class User extends Model
      *     description="description",
      *     example="Developer in Google working around 20 hour a week"
      * )
+     * @var string
      */
 
     private $description;
+
+    /**
+     * @OA\Property(
+     *     title="password",
+     *     description="password",
+     *     example="$2a$12$tYFi99IzacgMkgCZKUSkkuU7kL1PZb0MsvpvRQryLU2TJ6hW.A7HC"
+     * )
+     * @var string
+     */
+
+    private $password;
 
      /**
      * @OA\Property(
      *     title="media_id",
      *     description="media_id",
-     *     example="1"
+     *     example=1
      * )
+     * @var integer
      */
 
     private $media_id;
 
     /**
      * @OA\Property(
+     *     title="confirmed_at",
+     *     description="confirmed_at",
+     *     example="2022-01-22T21:34:30.000000",
+     *     format="datetime",
+     *     type="string"
+     * )
+     */
+    private $confirmed_at;
+
+    /**
+     * @OA\Property(
      *     title="created_at",
      *     description="created_at",
-     *     example="2022-01-22T21:34:30.000000"
+     *     example="2022-01-22T21:34:30.000000",
+     *     format="datetime",
+     *     type="string"
      * )
      */
     private $created_at;
@@ -91,7 +121,9 @@ class User extends Model
      * @OA\Property(
      *     title="updated_at",
      *     description="updated_at",
-     *     example="2022-01-22T21:34:30.000000"
+     *     example="2022-01-22T21:34:30.000000",
+     *     format="datetime",
+     *     type="string"
      * )
      */
     private $updated_at;

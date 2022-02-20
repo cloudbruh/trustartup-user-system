@@ -13,12 +13,16 @@
 |
 */
 
+//user
 $router->get('users', 'UserController@show');
 $router->get('users/{id}', 'UserController@get');
 $router->post('users', 'UserController@create');
 $router->delete('users/{id}', 'UserController@delete');
 $router->put('users', 'UserController@update');
-$router->post('users/attempt', 'UserController@attempt');
 
+//auth
+$router->post('login_attempt', 'UserController@attempt');
+
+//roles
 $router->post('users/{id}/roles', 'RoleController@add');
 $router->delete('users/{id}/roles', 'RoleController@delete');
