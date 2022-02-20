@@ -22,7 +22,7 @@ class Role extends Model
      *     example="APPLICANT"
      * )
      */
-    public $type;
+    private $type;
 
     /**
      * @OA\Property(
@@ -31,7 +31,7 @@ class Role extends Model
      *     example="2022-01-22T21:34:30.000000"
      * )
      */
-    public $created_at;
+    private $created_at;
 
     /**
      * @OA\Property(
@@ -40,7 +40,7 @@ class Role extends Model
      *     example="2022-01-22T21:34:30.000000"
      * )
      */
-    public $updated_at;
+    private $updated_at;
 
     protected $fillable = [
         'user_id', 'type'

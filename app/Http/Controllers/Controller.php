@@ -17,10 +17,5 @@ class Controller extends BaseController
      *     name="User",
      *     description="API Endpoints of User"
      * )
-     *
-     * @OA\Tag(
-     *     name="Dataset",
-     *     description="API Endpoints of Dataset"
-     * )
      */
 }

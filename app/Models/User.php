@@ -26,7 +26,7 @@ class User extends Model
      * )
      */
 
-    public $id;
+    private $id;
 
     /**
      * @OA\Property(
@@ -36,7 +36,7 @@ class User extends Model
      * )
      */
 
-    public $name;
+    private $name;
 
      /**
      * @OA\Property(
@@ -46,7 +46,7 @@ class User extends Model
      * )
      */
 
-    public $surname;
+    private $surname;
 
      /**
      * @OA\Property(
@@ -56,7 +56,7 @@ class User extends Model
      * )
      */
 
-    public $email;
+    private $email;
 
      /**
      * @OA\Property(
@@ -66,7 +66,7 @@ class User extends Model
      * )
      */
 
-    public $description;
+    private $description;
 
      /**
      * @OA\Property(
@@ -76,7 +76,7 @@ class User extends Model
      * )
      */
 
-    public $media_id;
+    private $media_id;
 
     /**
      * @OA\Property(
@@ -85,7 +85,7 @@ class User extends Model
      *     example="2022-01-22T21:34:30.000000"
      * )
      */
-    public $created_at;
+    private $created_at;
 
     /**
      * @OA\Property(
@@ -94,7 +94,7 @@ class User extends Model
      *     example="2022-01-22T21:34:30.000000"
      * )
      */
-    public $updated_at;
+    private $updated_at;
 
     /**
      * The attributes that are mass assignable.
@@ -102,7 +102,7 @@ class User extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'surname', 'email', 'description', 'password', 'media_id'
+        'name', 'surname', 'email', 'description', 'password', 'media_id', 'confirmed_at'
     ];
 
     /**
@@ -111,7 +111,7 @@ class User extends Model
      * @var array
      */
     protected $hidden = [
-        'password',
+        'password', 'confirmed_at'
     ];
 
     protected $casts = [
@@ -134,10 +134,5 @@ class User extends Model
     public function roles()
     {
       return $this->hasMany('App\Models\Role');
-    }
-
-    public function datasets()
-    {
-      return $this->hasMany('App\Models\Dataset');
     }
 }

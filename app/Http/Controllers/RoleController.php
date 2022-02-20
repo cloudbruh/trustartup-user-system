@@ -54,7 +54,7 @@ class RoleController extends Controller
     {
         $user = User::findOrFail($id);
         $roleType = $request->type;
-        if($user->roles->pluck('type')->contains($roleType)){
+        if($user->roles()->where('type', $roleType)->count()){
             return response()->json([
                 'message' => 'User already has this role',
             ], 406);
