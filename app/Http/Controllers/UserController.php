@@ -10,7 +10,6 @@ class UserController extends Controller
     /**
      * @OA\Get(
      *      path="/users",
-     *      operationId="show",
      *      tags={"User"},
      *      summary="Get list of users",
      *      @OA\Response(
@@ -35,11 +34,10 @@ class UserController extends Controller
     /**
      * @OA\Get(
      *      path="/users/{id}",
-     *      operationId="get",
      *      tags={"User"},
      *      summary="Get user by ID",
      *      @OA\Parameter(
-     *         name="user_id",
+     *         name="id",
      *         in="path",
      *         description="User id",
      *         required=true,
@@ -61,7 +59,6 @@ class UserController extends Controller
     /**
      * @OA\Post(
      *      path="/users",
-     *      operationId="create",
      *      tags={"User"},
      *      summary="Create user",
      *      @OA\RequestBody(
@@ -85,7 +82,6 @@ class UserController extends Controller
     /**
      * @OA\Put(
      *      path="/users",
-     *      operationId="update",
      *      tags={"User"},
      *      summary="Update user",
      *      @OA\RequestBody(
@@ -111,7 +107,6 @@ class UserController extends Controller
     /**
      * @OA\Delete(
      *      path="/users",
-     *      operationId="delete",
      *      tags={"User"},
      *      summary="Delete user",
      *      @OA\Parameter(
@@ -139,7 +134,6 @@ class UserController extends Controller
     /**
      * @OA\Post(
      *      path="/users/attempt",
-     *      operationId="attempt",
      *      tags={"User"},
      *      summary="Attempts user credentials",
      *      @OA\Parameter(

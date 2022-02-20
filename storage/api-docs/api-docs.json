@@ -12,10 +12,10 @@
                     "User"
                 ],
                 "summary": "Add role to the User",
-                "operationId": "addrole",
+                "operationId": "98a62da810f5c907037a14fb273aedf6",
                 "parameters": [
                     {
-                        "name": "user_id",
+                        "name": "id",
                         "in": "path",
                         "description": "User id",
                         "required": true,
@@ -62,10 +62,10 @@
                     "User"
                 ],
                 "summary": "Delete role from the User",
-                "operationId": "deleterole",
+                "operationId": "bb3113c4bb0a71fa9dd4227c84792bc6",
                 "parameters": [
                     {
-                        "name": "user_id",
+                        "name": "id",
                         "in": "path",
                         "description": "User id",
                         "required": true,
@@ -114,7 +114,7 @@
                     "User"
                 ],
                 "summary": "Get list of users",
-                "operationId": "show",
+                "operationId": "ec4fe381075eaaa20ceb989f2b968eff",
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -136,7 +136,7 @@
                     "User"
                 ],
                 "summary": "Update user",
-                "operationId": "update",
+                "operationId": "91c31ffa1274c96e56409be16e86396e",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -168,7 +168,7 @@
                     "User"
                 ],
                 "summary": "Create user",
-                "operationId": "create",
+                "operationId": "525df7b26300b0bb1680e47b6f92dcfd",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -197,7 +197,7 @@
                     "User"
                 ],
                 "summary": "Delete user",
-                "operationId": "delete",
+                "operationId": "16138b78c0727807c8bd23faa48a9522",
                 "parameters": [
                     {
                         "name": "id",
@@ -222,10 +222,10 @@
                     "User"
                 ],
                 "summary": "Get user by ID",
-                "operationId": "get",
+                "operationId": "26a36dfac5c702120d1266e158cb2fa4",
                 "parameters": [
                     {
-                        "name": "user_id",
+                        "name": "id",
                         "in": "path",
                         "description": "User id",
                         "required": true
@@ -254,7 +254,7 @@
                     "User"
                 ],
                 "summary": "Attempts user credentials",
-                "operationId": "attempt",
+                "operationId": "9609b0252d52bb68cba4dd8ed68cf135",
                 "parameters": [
                     {
                         "name": "email",

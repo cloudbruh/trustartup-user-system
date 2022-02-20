@@ -11,11 +11,10 @@ class RoleController extends Controller
     /**
      * @OA\Post(
      *      path="/users/{id}/roles",
-     *      operationId="addrole",
      *      tags={"User"},
      *      summary="Add role to the User",
      *      @OA\Parameter(
-     *         name="user_id",
+     *         name="id",
      *         in="path",
      *         description="User id",
      *         required=true,
@@ -54,7 +53,7 @@ class RoleController extends Controller
     {
         $user = User::findOrFail($id);
         $roleType = $request->type;
-        if($user->roles()->where('type', $roleType)->count()){
+        if ($user->roles()->where('type', $roleType)->count()) {
             return response()->json([
                 'message' => 'User already has this role',
             ], 406);
@@ -68,11 +67,10 @@ class RoleController extends Controller
     /**
      * @OA\Delete(
      *      path="/users/{id}/roles",
-     *      operationId="deleterole",
      *      tags={"User"},
      *      summary="Delete role from the User",
      *      @OA\Parameter(
-     *         name="user_id",
+     *         name="id",
      *         in="path",
      *         description="User id",
      *         required=true,
@@ -111,7 +109,7 @@ class RoleController extends Controller
     {
         $user = User::findOrFail($id);
         $role = $user->roles()->where('type', $request->type)->first();
-        if(!$role){
+        if (!$role) {
             return response()->json([
                 'message' => 'User does not have this role',
             ], 406);
