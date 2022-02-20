@@ -1,0 +1,22 @@
+services: 
+  user-system:
+    build: .
+    environment: 
+      - APP_ENV=production
+      - APP_KEY=yIcTghI5UqQY6z3IjTCupEbHMYPH73gJ
+      - APP_DEBUG=true
+      - DB_CONNECTION=pgsql
+      - DB_HOST=user-system-db
+      - DB_PORT=5432
+      - DB_DATABASE=postgres
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=postgres
+    command: ["/bin/sh", "-c", "php artisan migrate --force && php -S 0.0.0.0:80 -t public"]
+    ports:
+      - "8084:80"
+    depends_on:
+      - user-system-db
+  user-system-db:
+    image: "postgres:14.1-alpine"
+    environment:
+      - POSTGRES_PASSWORD=postgres
