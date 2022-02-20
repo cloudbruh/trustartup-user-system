@@ -248,24 +248,18 @@
                 }
             }
         },
-        "/users/attempt": {
+        "/attempt": {
             "post": {
                 "tags": [
                     "User"
                 ],
-                "summary": "Attempts user credentials",
-                "operationId": "9609b0252d52bb68cba4dd8ed68cf135",
+                "summary": "Get user by email with password",
+                "operationId": "089664b1063dec86c9e61b8f3ea9293d",
                 "parameters": [
                     {
                         "name": "email",
                         "in": "query",
                         "description": "email",
-                        "required": true
-                    },
-                    {
-                        "name": "password",
-                        "in": "query",
-                        "description": "hashed password",
                         "required": true
                     }
                 ],

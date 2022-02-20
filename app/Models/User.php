@@ -161,7 +161,7 @@ class User extends Model
     *
     * )
     */
-    public $roles;
+    private $roles;
 
     public function roles()
     {

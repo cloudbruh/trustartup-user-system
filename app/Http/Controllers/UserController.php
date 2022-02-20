@@ -133,19 +133,13 @@ class UserController extends Controller
 
     /**
      * @OA\Post(
-     *      path="/users/attempt",
+     *      path="/attempt",
      *      tags={"User"},
-     *      summary="Attempts user credentials",
+     *      summary="Get user by email with password",
      *      @OA\Parameter(
      *         name="email",
      *         in="query",
      *         description="email",
-     *         required=true,
-     *      ),
-     *      @OA\Parameter(
-     *         name="password",
-     *         in="query",
-     *         description="hashed password",
      *         required=true,
      *      ),
      *      @OA\Response(
@@ -159,7 +153,11 @@ class UserController extends Controller
 
     public function attempt(Request $request)
     {
-        $user = User::where('email', $request->email)->where('password', $request->password)->firstOrFail();
-        return response()->json($user, 200);
+        $user = User::where('email', $request->email)->firstOrFail();
+        return response()->json([
+            'id' => $user->id,
+            'password' => $user->password,
+            'roles' => $user->roles,
+        ], 200);
     }
 }

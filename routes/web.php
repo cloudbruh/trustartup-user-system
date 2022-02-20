@@ -21,7 +21,7 @@ $router->delete('users/{id}', 'UserController@delete');
 $router->put('users', 'UserController@update');
 
 //auth
-$router->post('login_attempt', 'UserController@attempt');
+$router->post('attempt', 'UserController@attempt');
 
 //roles
 $router->post('users/{id}/roles', 'RoleController@add');
