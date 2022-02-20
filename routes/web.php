@@ -15,14 +15,14 @@
 
 //user
 $router->get('users', 'UserController@show');
-$router->get('users/{id}', 'UserController@get');
-$router->post('users', 'UserController@create');
-$router->delete('users/{id}', 'UserController@delete');
-$router->put('users', 'UserController@update');
+$router->get('user/{id}', 'UserController@get');
+$router->post('user', 'UserController@create');
+$router->delete('user/{id}', 'UserController@delete');
+$router->put('user', 'UserController@update');
 
 //auth
 $router->post('attempt', 'UserController@attempt');
 
 //roles
-$router->post('users/{id}/roles', 'RoleController@add');
-$router->delete('users/{id}/roles', 'RoleController@delete');
+$router->post('user/{id}/roles', 'RoleController@add');
+$router->delete('user/{id}/roles', 'RoleController@delete');

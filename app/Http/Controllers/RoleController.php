@@ -10,7 +10,7 @@ class RoleController extends Controller
 
     /**
      * @OA\Post(
-     *      path="/users/{id}/roles",
+     *      path="/user/{id}/roles",
      *      tags={"User"},
      *      summary="Add role to the User",
      *      @OA\Parameter(
@@ -66,7 +66,7 @@ class RoleController extends Controller
 
     /**
      * @OA\Delete(
-     *      path="/users/{id}/roles",
+     *      path="/user/{id}/roles",
      *      tags={"User"},
      *      summary="Delete role from the User",
      *      @OA\Parameter(

@@ -6,13 +6,13 @@
         "version": "1.0.0"
     },
     "paths": {
-        "/users/{id}/roles": {
+        "/user/{id}/roles": {
             "post": {
                 "tags": [
                     "User"
                 ],
                 "summary": "Add role to the User",
-                "operationId": "98a62da810f5c907037a14fb273aedf6",
+                "operationId": "dc6a993cc2c0f0bb1085a1e76ae6ee05",
                 "parameters": [
                     {
                         "name": "id",
@@ -62,7 +62,7 @@
                     "User"
                 ],
                 "summary": "Delete role from the User",
-                "operationId": "bb3113c4bb0a71fa9dd4227c84792bc6",
+                "operationId": "73891cdd6c96c72b8f4daed6565ad29d",
                 "parameters": [
                     {
                         "name": "id",
@@ -130,13 +130,47 @@
                         }
                     }
                 }
-            },
+            }
+        },
+        "/user/{id}": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Get user by ID",
+                "operationId": "e8f442487377e11ade7834b7b5af7dcc",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "User id",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/User"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/user": {
             "put": {
                 "tags": [
                     "User"
                 ],
                 "summary": "Update user",
-                "operationId": "91c31ffa1274c96e56409be16e86396e",
+                "operationId": "c1f4bf30328d3929c1d0563d017d5710",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -168,7 +202,7 @@
                     "User"
                 ],
                 "summary": "Create user",
-                "operationId": "525df7b26300b0bb1680e47b6f92dcfd",
+                "operationId": "fdaf6e20ea63c9e43bacb0c1f25012d5",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -197,7 +231,7 @@
                     "User"
                 ],
                 "summary": "Delete user",
-                "operationId": "16138b78c0727807c8bd23faa48a9522",
+                "operationId": "f0a42451734c81280b324b51f88ca894",
                 "parameters": [
                     {
                         "name": "id",
@@ -209,38 +243,6 @@
                 "responses": {
                     "200": {
                         "description": "OK"
-                    },
-                    "404": {
-                        "description": "Not Found"
-                    }
-                }
-            }
-        },
-        "/users/{id}": {
-            "get": {
-                "tags": [
-                    "User"
-                ],
-                "summary": "Get user by ID",
-                "operationId": "26a36dfac5c702120d1266e158cb2fa4",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "description": "User id",
-                        "required": true
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/User"
-                                }
-                            }
-                        }
                     },
                     "404": {
                         "description": "Not Found"

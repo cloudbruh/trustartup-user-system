@@ -33,7 +33,7 @@ class UserController extends Controller
 
     /**
      * @OA\Get(
-     *      path="/users/{id}",
+     *      path="/user/{id}",
      *      tags={"User"},
      *      summary="Get user by ID",
      *      @OA\Parameter(
@@ -58,7 +58,7 @@ class UserController extends Controller
 
     /**
      * @OA\Post(
-     *      path="/users",
+     *      path="/user",
      *      tags={"User"},
      *      summary="Create user",
      *      @OA\RequestBody(
@@ -81,7 +81,7 @@ class UserController extends Controller
 
     /**
      * @OA\Put(
-     *      path="/users",
+     *      path="/user",
      *      tags={"User"},
      *      summary="Update user",
      *      @OA\RequestBody(
@@ -106,7 +106,7 @@ class UserController extends Controller
 
     /**
      * @OA\Delete(
-     *      path="/users",
+     *      path="/user",
      *      tags={"User"},
      *      summary="Delete user",
      *      @OA\Parameter(
