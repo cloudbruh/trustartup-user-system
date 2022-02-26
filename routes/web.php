@@ -14,7 +14,7 @@
 */
 
 //user
-$router->get('users', 'UserController@show');
+$router->get('user', 'UserController@show');
 $router->get('user/{id}', 'UserController@get');
 $router->post('user', 'UserController@create');
 $router->delete('user/{id}', 'UserController@delete');

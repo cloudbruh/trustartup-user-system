@@ -108,13 +108,13 @@
                 }
             }
         },
-        "/users": {
+        "/user": {
             "get": {
                 "tags": [
                     "User"
                 ],
                 "summary": "Get list of users",
-                "operationId": "ec4fe381075eaaa20ceb989f2b968eff",
+                "operationId": "366f803ccd51a727a8233c1bb8a35cbc",
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -130,41 +130,7 @@
                         }
                     }
                 }
-            }
-        },
-        "/user/{id}": {
-            "get": {
-                "tags": [
-                    "User"
-                ],
-                "summary": "Get user by ID",
-                "operationId": "e8f442487377e11ade7834b7b5af7dcc",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "description": "User id",
-                        "required": true
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/User"
-                                }
-                            }
-                        }
-                    },
-                    "404": {
-                        "description": "Not Found"
-                    }
-                }
-            }
-        },
-        "/user": {
+            },
             "put": {
                 "tags": [
                     "User"
@@ -243,6 +209,38 @@
                 "responses": {
                     "200": {
                         "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/user/{id}": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Get user by ID",
+                "operationId": "e8f442487377e11ade7834b7b5af7dcc",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "User id",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/User"
+                                }
+                            }
+                        }
                     },
                     "404": {
                         "description": "Not Found"
