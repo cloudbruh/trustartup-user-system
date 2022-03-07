@@ -20,3 +20,7 @@ services:
     image: "postgres:14.1-alpine"
     environment:
       - POSTGRES_PASSWORD=postgres
+    volumes:
+      - user-system-db:/var/lib/postgresql/data
+volumes: 
+  user-system-db:
