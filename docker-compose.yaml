@@ -1,7 +1,7 @@
-services: 
+services:
   user-system:
     build: .
-    environment: 
+    environment:
       - APP_ENV=production
       - APP_KEY=yIcTghI5UqQY6z3IjTCupEbHMYPH73gJ
       - APP_DEBUG=true
@@ -11,7 +11,7 @@ services:
       - DB_DATABASE=postgres
       - DB_USERNAME=postgres
       - DB_PASSWORD=postgres
-    command: ["/bin/sh", "-c", "sleep 10 && php artisan migrate --force && /docker-entrypoint.sh"]
+    command: ["/bin/sh", "-c", "sleep 20 && php artisan migrate --force --seed && /docker-entrypoint.sh"]
     ports:
       - "8084:80"
     depends_on:
@@ -22,5 +22,5 @@ services:
       - POSTGRES_PASSWORD=postgres
     volumes:
       - user-system-db:/var/lib/postgresql/data
-volumes: 
+volumes:
   user-system-db:
