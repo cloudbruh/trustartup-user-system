@@ -1,4 +1,4 @@
-<h1 align="center"> Trustartup user system </h1> <br>
+<h1 align="center"> Trustartup User System </h1> <br>
 
 <p align="center">
   Микросервис для проекта Trustartup.
@@ -50,8 +50,6 @@ php -S localhost:8000 -t public
 ### Docker
 * [Docker](https://www.docker.com/get-docker)
 
-### Run Local
-
 Сначала постройте образ:
 ```bash
 docker-compose build
@@ -62,9 +60,7 @@ docker-compose build
 docker-compose up -d
 ```
 
-Application will run by default on port `8084`
-
-Configure the port by changing `server.port` in `docker-compose.yaml`
+По умолчанию сервис запустится на `8084` порте
 
 ## API
 [Полная api-документация в формате OpenAPI3.0](storage/api-docs/api-docs.json)
